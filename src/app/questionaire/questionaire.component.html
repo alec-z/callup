@@ -1,0 +1,14 @@
+<div>
+  <form [formGroup]="questionaireForm">
+    <div class="form-group">
+      <label>你的Github账号</label>
+      <input type="text" class="form-control" placeholder="Enter github account" formControlName="githubAccount">
+      <small class="form-text text-muted">让我们认识你</small>
+    </div>
+
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" formControlName="notice" (click)="onCheckNotice()">
+      <label class="form-check-label">你是否愿意贡献ServiceComb社区</label>
+    </div>
+  </form>
+</div>

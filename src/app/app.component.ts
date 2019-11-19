@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'call-up';
+  githubAccount;
+  onGithubAccountChanged(questionaire) {
+    this.githubAccount = questionaire.githubAccount;
+
+  }
 }

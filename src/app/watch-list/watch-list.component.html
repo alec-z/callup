@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">项目名</th>
+    <th scope="col">URL</th>
+    <th scope="col">状态</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let repository of repositories | async">
+    <th scope="row">{{repository.id}}</th>
+    <td><a [href]="repository.repositoryURL" target="_blank">{{repository.repositoryName}}</a></td>
+    <td><a [href]="repository.repositoryURL" target="_blank">{{repository.repositoryURL}}</a></td>
+    <td><fa-icon *ngIf="repository.watched" class="text-success" [icon]="faStar"></fa-icon>
+      <fa-icon *ngIf="!repository.watched" [icon]="faStar"></fa-icon>
+    </td>
+  </tr>
+
+  </tbody>
+</table>

@@ -1,0 +1,7 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+  <div class="form-group">
+    <label>你的微信</label>
+    <input type="text" class="form-control" placeholder="输入你的微信" formControlName="weixin">
+  </div>
+  <button type="submit" class="btn btn-primary">提交</button>
+</form>
